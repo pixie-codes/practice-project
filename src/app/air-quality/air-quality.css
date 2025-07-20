@@ -1,0 +1,41 @@
+.aqi-container {
+  text-align: center;
+  padding: 30px;
+  border-radius: 12px;
+  color: white;
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.aqi-value {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.aqi-label {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* AQI Category Styles */
+.good {
+  background-color: #009966;
+}
+.moderate {
+  background-color: #ffde33;
+  color: black;
+}
+.unhealthy-sensitive {
+  background-color: #ff9933;
+}
+.unhealthy {
+  background-color: #cc0033;
+}
+.very-unhealthy {
+  background-color: #660099;
+}
+.hazardous {
+  background-color: #7e0023;
+}

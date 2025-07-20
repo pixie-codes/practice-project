@@ -1,0 +1,5 @@
+<div class="aqi-container" [ngClass]="getAqiCategory()">
+  <h2>Air Quality Index (AQI) - {{aqiObj?.data?.city ? aqiObj?.data?.city : 'San Mateo, California'}} </h2>
+  <div class="aqi-value">{{ aqiObj?.data?.aqi ? aqiObj?.data?.aqi : 21  }}</div>
+  <div class="aqi-label">{{ getCategoryLabel() }}</div>
+</div>
