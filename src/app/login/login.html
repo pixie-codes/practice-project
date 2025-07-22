@@ -1,0 +1,40 @@
+<div class="form-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h2>Login (Using Reactive Forms)</h2>
+    <div class="input-fields">
+      <span>Username : </span>
+      <input type="text" formControlName="username" />
+      <div class="info-text">
+        @if(username?.hasError('required')){
+        <span>Username is required.</span>
+        } @if(username?.invalid && (username?.dirty || username?.touched)){
+        <span>Please enter valid username.</span>
+        }
+      </div>
+    </div>
+    <div class="input-fields">
+      <span>Password : </span>
+      <input type="text" formControlName="password" />
+      <div class="info-text">
+        @if(password?.hasError('required')){
+        <span>Password is required. </span>
+        } @if(password?.invalid && (password?.dirty || password?.touched)){
+        <span>Please enter valid password.</span>
+        }
+      </div>
+    </div>
+    <div class="input-fields">
+      <span> Email ID : </span>
+      <input type="text" formControlName="email" />
+      <div class="info-text">
+        @if(email?.hasError('required')){
+        <span>Email is required.</span>
+        } @if(email?.invalid && (email?.dirty || email?.touched)){
+        <span>Please enter valid email id.</span>
+        }
+      </div>
+    </div>
+
+    <button>Submit</button>
+  </form>
+</div>
